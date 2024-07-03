@@ -1,11 +1,16 @@
+import { MdArrowOutward } from "react-icons/md";
+import { Link } from "react-router-dom";
+
 
 const Navbar = () => {
 
     const navRoutes =
         <>
 
-            <li><a>Submenu 1</a></li>
-            <li><a>Submenu 2</a></li>
+            <li><a>Home</a></li>
+            <li><a>Services</a></li>
+            <li><a>Blog</a></li>
+            <li><a>About us</a></li>
         </>
 
 
@@ -31,10 +36,16 @@ const Navbar = () => {
                         <ul
                             tabIndex={0}
                             className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
-                                {navRoutes}
+                            {navRoutes}
                         </ul>
                     </div>
-                    <a className="btn btn-ghost text-xl">daisyUI</a>
+                    <a className="btn btn-ghost text-xl">
+
+                        <Link to={"/"}>
+                            <img src="https://i.ibb.co/47k1Yw8/logo-dark.png" alt="" />
+                        </Link>
+
+                    </a>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">
@@ -42,7 +53,7 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <a className="btn">Button</a>
+                    <a className="border-2 py-1 px-3 flex items-center gap-1 rounded-[10px]">Appointment <MdArrowOutward /></a>
                 </div>
             </div>
         </>
